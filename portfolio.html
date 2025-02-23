@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN for icon fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="logo-text">Karthika MS</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container" id="home">
+                <div class="hero-pic">
+                    <img src="E:\MCA\Portfolio_1\images.jpg" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>KARTHIKA MS</h1>
+                    <p>Hey there!<br>Passionate about creating beautiful and functional websites. Welcome to my portfolio!</p>
+                    <div class="btn-group">
+                        <a href="#projects" class="btn">View Projects</a>
+                        <a href="#about" class="btn">About Me</a>
+                    </div>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-pintrest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="wrapper">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Currently a student pursuing on MCA at the Federal Institute Of Science and Technologies (FISAT)</p>
+                </div>
+                <div class="about-pic">
+                    <img src="E:\MCA\Portfolio_1\images.jpg" alt="about pic">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="wrapper">
+            <h2>Educational Qualifications</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>State Board, 10th from Mount Tabor, Pathanapuram</p>
+                    <p>Kerala Board, 12th from GHSS,Kalanjoor</p>
+                    <p>BVOC from KSMDB College, Ssatamcotta</p>
+                    <p>MCA from Federal Institute Of Science and Technologies, Angamaly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="wrapper">
+            <h2>My Projects</h2>
+            <div class="project-container">
+                <div class="project-card">
+                    
+                    <div class="project-text">
+                        <h3>Diabetes Prediction using Machine Learning</h3>
+                        <p>This project is to develop a model that can perform the prediction of diabetes of a patient. Here, we are using each classification algorithm (KNN, SVC, Naive Bayes, Decision Tree, Random Forest, AdaBoost, XGBoost) on the categorical dataset to build a model with high accuracy and deploy it. According to the given new data, the machine will predict whether the person has Diabetes or not.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                   
+                    <div class="project-text">
+                        <h3>Digit Recognizer</h3>
+                        <p>Built a Simple Neural Network from Scratch (NumPy) for MNIST Digit Recognition! Ever wondered how computers recognize handwritten digits? I dove into the fundamentals by implementing a basic neural network in Python using NumPy, to classify digits in the classic MNIST dataset. This project helped me gain a deeper understanding of: Neural Network Architecture: Building a network with an input layer (representing pixels), a hidden layer for processing features, and an output layer for digit classification. Activation Functions: Applying functions like ReLU to introduce non-linearity and improve learning. Cost Function and Backpropagation: Using techniques like gradient descent to optimize the network's weights and biases for better accuracy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typed.js for typing text effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        // Toggle the navbar on small screens
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        // Typed.js for the typing effect in the hero section
+        var typed = new Typed(".input", {
+            strings: ["Frontend Developer", "UX Designer", "Web Developer"],
+            typedSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+    </script>
+</body>
+</html>
